@@ -147,6 +147,40 @@ function gamesTurn() {
 // will need to create a change color function
 // create a function for each of the flashing elements
 // will need an event listner on the colors
+function one() {
+    if (noise) {
+        let audio = document.getElementById("audio1");
+        audio.play();
+    }
+    noise = true;
+    topL.style.backgroundColor = "darkgreen";
+}
+function two() {
+    if (noise) {
+        let audio = document.getElementById("audio2");
+        audio.play();
+    }
+    noise = true;
+    topR.style.backgroundColor = "darkred";
+}
+function three() {
+    if (noise) {
+        let audio = document.getElementById("audio3");
+        audio.play();
+    }
+    noise = true;
+    bottomL.style.backgroundColor = "gold";
+}
+function four() {
+    if (noise) {
+        let audio = document.getElementById("audio4");
+        audio.play();
+    }
+    noise = true;
+    bottomL.style.backgroundColor = "darkblue";
+}
+
+
 topL.addEventListener("click", () => {
     if(on) {
         console.log("on");
