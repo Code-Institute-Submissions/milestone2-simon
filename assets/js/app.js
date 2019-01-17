@@ -65,7 +65,7 @@ let order = [];
 let on = false;
 let diff = false;
 
-power.addEventListener("click", function() {
+power.addEventListener("click", (event) => {
     console.log("Checked");
     if (power.checked === true) {
         on = true;
@@ -79,7 +79,7 @@ power.addEventListener("click", function() {
 
 });
 
-difficulty.addEventListener("click", function() {
+difficulty.addEventListener("click", (event) => {
     console.log("Checked");
     if (difficulty.checked == true) {
         diff = true;
