@@ -65,9 +65,15 @@ let order = [];
 let on = false;
 let diff = false;
 let win;
+let flash;
+let flashTime;
+let noise = true;
+let turn;
+let correct;
+let cpu;
 
 power.addEventListener("click", (event) => {
-    console.log("Checked");
+    //console.log("Checked");
     if (power.checked === true) {
         on = true;
         counter.innerHTML = "READY";
@@ -81,7 +87,7 @@ power.addEventListener("click", (event) => {
 });
 
 difficulty.addEventListener("click", (event) => {
-    console.log("Checked");
+    //console.log("Checked");
     if (difficulty.checked == true) {
         diff = true;
     }
@@ -92,8 +98,28 @@ difficulty.addEventListener("click", (event) => {
 });
 
 startGame.addEventListener("click", () => {
-    if(on || win) {
+    if (on || win) {
         playGame();
-    };
-    console.log(startGame);
+    }
+    //console.log(startGame);
 });
+
+function playGame() {
+    win = false;
+    order = [];
+    player = [];
+    flash = 0;
+    flashTime = 0;
+    turn = 1;
+    counter.innerHTML = 1;
+    correct = true;
+
+    for (var i = 0; i < 20; i++) {
+        order.push(Math.floor(Math.random() * 4) + 1);
+    }
+    console.log(order);
+    cpu = true;
+    
+    flashTime = setInterval(800);
+
+}
