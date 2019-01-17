@@ -63,18 +63,29 @@ simon.appendChild(countScreen);
 let player = [];
 let order = [];
 let on = false;
+let diff = false;
 
 power.addEventListener("click", function() {
     console.log("Checked");
-    if(power.checked === true) {
+    if (power.checked === true) {
         on = true;
         counter.innerHTML = "READY";
-    } else {
-        on = false;
-        counter.innerHTML = "OFF"
     }
+    else {
+        on = false;
+        counter.innerHTML = "OFF";
+    }
+    console.log(power.checked);
+
 });
 
 difficulty.addEventListener("click", function() {
     console.log("Checked");
+    if (difficulty.checked == true) {
+        diff = true;
+    }
+    else {
+        diff = false;
+    }
+    console.log(difficulty.checked);
 });
