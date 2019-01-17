@@ -1,48 +1,42 @@
 body {
     background: url(../img/bg-pic.jpeg);
 }
+.bg-header {
+    text-align: center;
+    margin: 20px;
+    background-color: #fff;
+}
+
+.jumbotron {
+    margin-top: 80px;
+    padding: 40px;
+    position: relative;
+}
 
 .bg-section {
     
 }
 
 #topleft {
-    display: inline-block;
-    alignment-baseline: central;
-    height: 150px;
-    width: 150px;
     background: green;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 25px;
 }
-
 #topRight {
-    display: inline-block;
-    height: 150px;
-    width: 150px;
-    background: green;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 25px;
+    background: red;
 }
-
 #bottomLeft {
-    display: inline-block;
-    height: 150px;
-    width: 150px;
-    background: green;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 25px;
+    background: yellow;
 }
-
+#bottomRight {
+    background: blue;
+}    
+#topleft,
+#topRight,
+#bottomLeft,
 #bottomRight {
     display: inline-block;
-    height: 150px;
-    width: 150px;
-    background: green;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
     padding: 10px;
-    margin: 25px;
+    margin-left: auto;
+    margin-right: auto;
 }
