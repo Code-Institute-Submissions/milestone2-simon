@@ -117,9 +117,33 @@ function playGame() {
     for (var i = 0; i < 20; i++) {
         order.push(Math.floor(Math.random() * 4) + 1);
     }
-    console.log(order);
+    //console.log(order);
     cpu = true;
-    
     flashTime = setInterval(800);
-
 }
+// will need to create a change color function
+// create a function for each of the flashing elements
+// will need an event listner on the colors
+topL.addEventListener("click", () => {
+    if(on) {
+        console.log("on");
+    }
+});
+
+topR.addEventListener("click", () => {
+    if(on) {
+        console.log("on");
+    }
+});
+
+bottomL.addEventListener("click", () => {
+    if(on) {
+        console.log("on");
+    }
+});
+
+bottomR.addEventListener("click", () => {
+    if(on) {
+        console.log("on");
+    }
+});
