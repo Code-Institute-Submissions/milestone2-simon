@@ -121,6 +121,29 @@ function playGame() {
     cpu = true;
     flashTime = setInterval(800);
 }
+
+function gamesTurn() {
+    on = false;
+    
+    if(flash == turn) {
+        clearInterval(flashTime);
+        cpu = false;
+        clearcolor();
+        on = true;
+    }
+    if (cpu) {
+        clearcolor();
+        setTimeout( () => {
+            // creating the order in what is flashed and what it is assigned
+            if (order[flash] == 1) one();
+            if (order[flash] == 2) two();
+            if (order[flash] == 3) three();
+            if (order[flash] == 4) four();
+            //increase flash
+            flash++;
+        }, 200)
+    }
+}
 // will need to create a change color function
 // create a function for each of the flashing elements
 // will need an event listner on the colors
