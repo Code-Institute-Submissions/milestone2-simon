@@ -119,7 +119,7 @@ function playGame() {
     }
     //console.log(order);
     cpu = true;
-    flashTime = setInterval(800);
+    flashTime = setInterval(gamesTurn, 800);
 }
 
 function gamesTurn() {
@@ -170,3 +170,17 @@ bottomR.addEventListener("click", () => {
         console.log("on");
     }
 });
+
+function flashColor() {
+    topL.style.backgroundColor = "darkgreen"
+    topR.style.backgroundColor = "darkred";
+    bottomR.style.backgroundColor = "darkblue";
+    bottomL.style.backgroundColor = "goldenrod";
+}
+
+function clearcolor() {
+    topL.style.backgroundColor = "green"
+    topR.style.backgroundColor = "red";
+    bottomR.style.backgroundColor = "blue";
+    bottomL.style.backgroundColor = "yellow";;
+}
