@@ -11,7 +11,7 @@ power.setAttribute("id", "checkboxSuccess");
 power.setAttribute("type", "checkbox");
 power.setAttribute("class", "toggle left-align");
 label.setAttribute("placeholder", "Power On");
-label.innerHTML = "Power On"
+label.innerHTML = "Power On";
 button.appendChild(power);
 button.appendChild(label);
 
@@ -26,9 +26,9 @@ difficulty.setAttribute("id", "checkboxError");
 difficulty.setAttribute("type", "checkbox");
 difficulty.setAttribute("class", "toggle right-align");
 label2.setAttribute("placeholder", "Difficult");
-label2.innerHTML = "Hard Mode"
+label2.innerHTML = "Hard Mode";
 button.appendChild(difficulty);
-button.appendChild(label2)
+button.appendChild(label2);
 
 const topL = document.createElement("div");
 topL.setAttribute("id", "topleft");
@@ -52,6 +52,7 @@ simon.appendChild(bottomR);
 
 const counter = document.createElement("div");
 counter.setAttribute("id", "turn");
+counter.innerHTML = "POWER ME ON!"
 simon.appendChild(counter);
 
 const countScreen = document.createElement("div");
@@ -59,4 +60,21 @@ countScreen.setAttribute("class", "game-count");
 countScreen.innerHTML = "---";
 simon.appendChild(countScreen);
 
+let player = [];
+let order = [];
+let on = false;
 
+power.addEventListener("click", function() {
+    console.log("Checked");
+    if(power.checked === true) {
+        on = true;
+        counter.innerHTML = "READY";
+    } else {
+        on = false;
+        counter.innerHTML = "OFF"
+    }
+});
+
+difficulty.addEventListener("click", function() {
+    console.log("Checked");
+});
