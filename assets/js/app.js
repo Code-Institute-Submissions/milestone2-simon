@@ -64,6 +64,7 @@ let player = [];
 let order = [];
 let on = false;
 let diff = false;
+let win;
 
 power.addEventListener("click", (event) => {
     console.log("Checked");
@@ -88,4 +89,11 @@ difficulty.addEventListener("click", (event) => {
         diff = false;
     }
     console.log(difficulty.checked);
+});
+
+startGame.addEventListener("click", () => {
+    if(on || win) {
+        playGame();
+    };
+    console.log(startGame);
 });
