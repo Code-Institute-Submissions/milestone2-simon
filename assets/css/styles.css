@@ -2,4 +2,47 @@ body {
     background: url(../img/bg-pic.jpeg);
 }
 
+.bg-section {
+    
+}
 
+#topleft {
+    display: inline-block;
+    alignment-baseline: central;
+    height: 150px;
+    width: 150px;
+    background: green;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 25px;
+}
+
+#topRight {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    background: green;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 25px;
+}
+
+#bottomLeft {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    background: green;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 25px;
+}
+
+#bottomRight {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    background: green;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 25px;
+}
