@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- jasmine testing
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine-html.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/boot.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.css" />
+    -->
+    <!-- bootstrap link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <!-- css link -->
     <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+    <!--audio files for the game -->
     <audio id="audio1" src="assets/audio/simonSound1.mp3"></audio>
     <audio id="audio2" src="assets/audio/simonSound2.mp3"></audio>
     <audio id="audio3" src="assets/audio/simonSound3.mp3"></audio>
@@ -26,7 +31,9 @@
                 <h1 class="heading col-md-6">Welcone To Simon</h1>
                 <div class="row col-md-12 simon">
                     <div class="row">
-                        <h5 class="description">Hello, I'm Simon. I am a memory game from the 1970's that plays a sequence of lights that you have to follow the order to win the game. As the levels go up the tricker i get SO PAY ATTENTION.
+                        <h5 class="description">Hello, I'm Simon. I am a memory game from the 1970's that plays a
+                        sequence of lights that you have to follow the order to win the game. As the levels go up
+                        the tricker i get SO PAY ATTENTION.
                         </h5>
                     </div>
                     <div class="row">
@@ -47,11 +54,15 @@
     <hr/>
     <br/>
     <div class="container">
+        <!-- container for the game -->
         <div class="container-fluid section">
+            <!-- div for the switches that will be targeted by JavaScript -->
             <div class="row" id="switch"></div>
+            <!-- div for the game that will be targeted by JavaScript for the player components -->
             <div id="game" class="container-fluid bg-section col-md-12">
 
             </div>
+            <!-- div so that JavaScript can create the screens for the game -->
             <div class="row col-md-12 col-sm-12" id="screen"></div>
         </div>
     </div>
