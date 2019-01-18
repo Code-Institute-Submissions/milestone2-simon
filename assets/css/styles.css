@@ -4,11 +4,21 @@ body {
     padding: 0px;
 }
 
-.bg-header {
+.heading {
     text-align: center;
     font-family: fantasy;
     margin: 20px;
     background-color: #fff;
+    border-radius: 20px;
+}
+
+.simon {
+    margin: 5px;
+    text-align: center;
+    word-wrap: break-word;
+    font-family: fantasy;
+    color: #000;
+    
 }
 
 .bg-section {
@@ -76,6 +86,7 @@ body {
     margin-left: auto;
     text-align: center;
 }
+
 #turn,
 .game-count,
 .my-account {
