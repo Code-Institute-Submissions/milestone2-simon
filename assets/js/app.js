@@ -124,8 +124,8 @@ function playGame() {
 
 function gamesTurn() {
     on = false;
-    
-    if(flash == turn) {
+
+    if (flash == turn) {
         clearInterval(flashTime);
         cpu = false;
         clearcolor();
@@ -133,7 +133,7 @@ function gamesTurn() {
     }
     if (cpu) {
         clearcolor();
-        setTimeout( () => {
+        setTimeout(() => {
             // creating the order in what is flashed and what it is assigned
             if (order[flash] == 1) one();
             if (order[flash] == 2) two();
@@ -155,6 +155,7 @@ function one() {
     noise = true;
     topL.style.backgroundColor = "darkgreen";
 }
+
 function two() {
     if (noise) {
         let audio = document.getElementById("audio2");
@@ -163,6 +164,7 @@ function two() {
     noise = true;
     topR.style.backgroundColor = "darkred";
 }
+
 function three() {
     if (noise) {
         let audio = document.getElementById("audio3");
@@ -171,6 +173,7 @@ function three() {
     noise = true;
     bottomL.style.backgroundColor = "gold";
 }
+
 function four() {
     if (noise) {
         let audio = document.getElementById("audio4");
@@ -182,26 +185,58 @@ function four() {
 
 
 topL.addEventListener("click", () => {
-    if(on) {
-        console.log("on");
+    if (on) {
+        //console.log("on");
+        player.push(1);
+        //check();
+        one();
+        if (!win) {
+            setTimeout(() => {
+                clearcolor();
+            }, 300);
+        }
     }
 });
 
 topR.addEventListener("click", () => {
-    if(on) {
-        console.log("on");
+    if (on) {
+        //console.log("on");
+        player.push(2);
+        //check();
+        one();
+        if (!win) {
+            setTimeout(() => {
+                clearcolor();
+            }, 300);
+        }
     }
 });
 
 bottomL.addEventListener("click", () => {
-    if(on) {
-        console.log("on");
+    if (on) {
+        //console.log("on");
+        player.push(3);
+        //check();
+        one();
+        if (!win) {
+            setTimeout(() => {
+                clearcolor();
+            }, 300);
+        }
     }
 });
 
 bottomR.addEventListener("click", () => {
-    if(on) {
-        console.log("on");
+    if (on) {
+        //console.log("on");
+        player.push(4);
+        //check();
+        one();
+        if (!win) {
+            setTimeout(() => {
+                clearcolor();
+            }, 300);
+        }
     }
 });
 
