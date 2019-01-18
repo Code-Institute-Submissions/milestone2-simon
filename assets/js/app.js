@@ -244,9 +244,9 @@ bottomR.addEventListener("click", (event) => {
 // next need to create a function to check the answers against the cpu
 
 function check() {
-    if (player[player.length-1] !== order[player.length-1])
+    if (player[player.length-1] !== order[player.length-1]) {
         correct = false;
-        
+    }
     if (player.length == 20 && correct) {
         gameOver();
     }
@@ -265,7 +265,7 @@ function check() {
                 flash = 0;
                 player = [];
                 correct = true;
-                setInterval(flashTime, 800);
+                flashTime = setInterval(gamesTurn, 800);
             }
         }, 800);
         noise = false;
@@ -273,6 +273,7 @@ function check() {
     if (turn == player.length && correct && !win) {
         turn++;
         player = [];
+        cpu = true;
         flash = 0;
         counter.innerHTML = turn;
         flashTime = setInterval(gamesTurn, 800);
