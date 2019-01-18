@@ -183,7 +183,6 @@ function four() {
     bottomL.style.backgroundColor = "darkblue";
 }
 
-
 topL.addEventListener("click", () => {
     if (on) {
         //console.log("on");
@@ -239,6 +238,12 @@ bottomR.addEventListener("click", () => {
         }
     }
 });
+
+// next need to create a function to check the answers against the cpu
+
+function check() {
+    if(player[])
+}
 
 function flashColor() {
     topL.style.backgroundColor = "darkgreen"
