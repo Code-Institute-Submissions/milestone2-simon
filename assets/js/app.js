@@ -1,34 +1,35 @@
 const simon = document.getElementById("game");
 const button = document.getElementById("switch");
+const screen = document.getElementById("screen")
 console.log(simon);
 console.log(button);
 
 var label = document.createElement("label");
 var label2 = document.createElement("label");
 
-const power = document.createElement("input");
-power.setAttribute("id", "checkboxSuccess");
-power.setAttribute("type", "checkbox");
-power.setAttribute("class", "toggle left-align");
-label.setAttribute("placeholder", "Power On");
-label.innerHTML = "Power On";
-button.appendChild(power);
-button.appendChild(label);
-
 const startGame = document.createElement("button");
 startGame.setAttribute("id", "start");
 startGame.setAttribute("class", "btn btn-success");
-startGame.innerHTML = "Start Game";
+startGame.innerHTML = "<strong>Start Game</Strong>";
 button.appendChild(startGame);
 
+const power = document.createElement("input");
+power.setAttribute("id", "power-on");
+power.setAttribute("type", "checkbox");
+power.setAttribute("class", "toggle left-align");
+label.setAttribute("class", "power-on");
+label.innerHTML = "Power On";
+button.appendChild(label);
+button.appendChild(power);
+
 const difficulty = document.createElement("input");
-difficulty.setAttribute("id", "checkboxError");
+difficulty.setAttribute("id", "diff-mode");
 difficulty.setAttribute("type", "checkbox");
 difficulty.setAttribute("class", "toggle right-align");
-label2.setAttribute("placeholder", "Difficult");
+label2.setAttribute("class", "hard-mode");
 label2.innerHTML = "Hard Mode";
-button.appendChild(difficulty);
 button.appendChild(label2);
+button.appendChild(difficulty);
 
 const topL = document.createElement("div");
 topL.setAttribute("id", "topleft");
@@ -52,13 +53,19 @@ simon.appendChild(bottomR);
 
 const counter = document.createElement("div");
 counter.setAttribute("id", "turn");
+counter.setAttribute("class", "screen-text align-left")
 counter.innerHTML = "POWER ME ON!";
-simon.appendChild(counter);
+screen.appendChild(counter);
 
 const countScreen = document.createElement("div");
-countScreen.setAttribute("class", "game-count");
+countScreen.setAttribute("class", "game-count ");
 countScreen.innerHTML = "---";
-simon.appendChild(countScreen);
+screen.appendChild(countScreen);
+
+const accountName = document.createElement("div");
+accountName.setAttribute("class", "my-account align-right");
+accountName.innerHTML = "<a href='https://github.com/patrickoneill'>Patrick O'Neill @  GitHub</a>";
+screen.appendChild(accountName);
 
 let player = [];
 let order = [];
