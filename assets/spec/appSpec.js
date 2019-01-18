@@ -1,6 +1,6 @@
 describe("Testing power", () => {
     describe("Power Button", () => {
-        it("should return true", () => {
+        it("should return false", () => {
             expect(power.checked).toBe(false);
         });
     });
@@ -16,16 +16,17 @@ describe("Testing difficult", () => {
 
 describe("Check Readout", () => {
     describe("counter screen", () => {
-        it("should return '<empty>'", () => {
+        it("should return '---'", () => {
             expect(countScreen.innerHTML).toBe("---");
         });
     });
 });
 
-describe("", () => {
-    describe("", () => {
-        it("", () => {
-            expect()
-        })
-    })
-})
+describe("Check Readout", () => {
+    describe("prompt screen", () => {
+        it("should return 'power me on'", () => {
+            expect(counter.innerHTML).toBe("POWER ME ON!");
+        });
+    });
+});
+
