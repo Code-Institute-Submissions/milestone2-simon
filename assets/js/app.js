@@ -303,6 +303,7 @@ function clearcolor() {
 // need to create a gameOver()
 
 function gameOver() {
+    alert("Game Over")
     flashColor();
     counter.innerHTML = "Winner Winner";
     on = false;
