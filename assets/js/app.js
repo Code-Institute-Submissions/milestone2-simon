@@ -52,7 +52,7 @@ simon.appendChild(bottomR);
 
 const counter = document.createElement("div");
 counter.setAttribute("id", "turn");
-counter.innerHTML = "POWER ME ON!"
+counter.innerHTML = "POWER ME ON!";
 simon.appendChild(counter);
 
 const countScreen = document.createElement("div");
@@ -74,13 +74,15 @@ let cpu;
 
 power.addEventListener("click", (event) => {
     //console.log("Checked");
-    if (power.checked === true) {
+    if (power.checked == true) {
         on = true;
         counter.innerHTML = "READY";
     }
     else {
         on = false;
         counter.innerHTML = "OFF";
+        clearcolor();
+        clearInterval(flashTime);
     }
     console.log(power.checked);
 
@@ -114,7 +116,7 @@ function playGame() {
     counter.innerHTML = 1;
     correct = true;
 
-    for (var i = 0; i < 20; i++) {
+    for (let i = 0; i < 20; i++) {
         order.push(Math.floor(Math.random() * 4) + 1);
     }
     //console.log(order);
@@ -171,7 +173,7 @@ function three() {
         audio.play();
     }
     noise = true;
-    bottomR.style.backgroundColor = "darkblue";
+    bottomL.style.backgroundColor = "goldenrod";
 }
 
 function four() {
@@ -180,10 +182,10 @@ function four() {
         audio.play();
     }
     noise = true;
-    bottomL.style.backgroundColor = "gold";
+    bottomR.style.backgroundColor = "darkblue";
 }
 
-topL.addEventListener("click", () => {
+topL.addEventListener("click", (event) => {
     if (on) {
         //console.log("on");
         player.push(1);
@@ -197,7 +199,7 @@ topL.addEventListener("click", () => {
     }
 });
 
-topR.addEventListener("click", () => {
+topR.addEventListener("click", (event) => {
     if (on) {
         //console.log("on");
         player.push(2);
@@ -211,7 +213,7 @@ topR.addEventListener("click", () => {
     }
 });
 
-bottomL.addEventListener("click", () => {
+bottomL.addEventListener("click", (event) => {
     if (on) {
         //console.log("on");
         player.push(3);
@@ -225,7 +227,7 @@ bottomL.addEventListener("click", () => {
     }
 });
 
-bottomR.addEventListener("click", () => {
+bottomR.addEventListener("click", (event) => {
     if (on) {
         //console.log("on");
         player.push(4);
@@ -242,11 +244,11 @@ bottomR.addEventListener("click", () => {
 // next need to create a function to check the answers against the cpu
 
 function check() {
+    if (player[player.length-1] !== order[player.length-1])
+        correct = false;
+        
     if (player.length == 20 && correct) {
         gameOver();
-    }
-    if (player[player.length] !== order[player.length]) {
-        correct = false;
     }
     if (correct == false) {
         flashColor();
