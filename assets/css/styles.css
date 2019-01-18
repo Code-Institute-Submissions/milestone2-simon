@@ -6,6 +6,7 @@ body {
 
 .bg-header {
     text-align: center;
+    font-family: fantasy;
     margin: 20px;
     background-color: #fff;
 }
@@ -46,11 +47,11 @@ body {
     color: #000;
     margin: 0 10px 0 10px;
     font-size: medium;
-    font-style: italic;
 }
 
 #switch {
     padding-bottom: 5px;
+    font-family: fantasy;
     margin: 0px;
     text-align: center;
 }
@@ -71,6 +72,7 @@ body {
 
 #screen {
     padding: 10px;
+    font-family: fantasy;
     margin-left: auto;
     text-align: center;
 }
@@ -79,7 +81,6 @@ body {
 .my-account {
     display: inline-table;
     font-size: medium;
-    font-style: italic;
     text-align: center;
     color: #000;
     width: 200px;

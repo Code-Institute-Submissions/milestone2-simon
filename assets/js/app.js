@@ -120,7 +120,7 @@ function playGame() {
     flash = 0;
     flashTime = 0;
     turn = 1;
-    counter.innerHTML = 1;
+    counter.innerHTML = "";
     correct = true;
 
     for (let i = 0; i < 20; i++) {
@@ -259,9 +259,9 @@ function check() {
     }
     if (correct == false) {
         flashColor();
-        turn.innerHTML = "Not Me!";
+        counter.innerHTML = "Not Me!";
         setTimeout(() => {
-            turn.innerHTML = turn;
+            counter.innerHTML = "";
             clearcolor();
 
             if (diff) {
@@ -282,7 +282,7 @@ function check() {
         player = [];
         cpu = true;
         flash = 0;
-        counter.innerHTML = turn;
+        countScreen.innerHTML = turn;
         flashTime = setInterval(gamesTurn, 800);
     }
 }
