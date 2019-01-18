@@ -171,7 +171,7 @@ function three() {
         audio.play();
     }
     noise = true;
-    bottomL.style.backgroundColor = "gold";
+    bottomR.style.backgroundColor = "darkblue";
 }
 
 function four() {
@@ -180,7 +180,7 @@ function four() {
         audio.play();
     }
     noise = true;
-    bottomL.style.backgroundColor = "darkblue";
+    bottomL.style.backgroundColor = "gold";
 }
 
 topL.addEventListener("click", () => {
@@ -202,7 +202,7 @@ topR.addEventListener("click", () => {
         //console.log("on");
         player.push(2);
         check();
-        one();
+        two();
         if (!win) {
             setTimeout(() => {
                 clearcolor();
@@ -216,7 +216,7 @@ bottomL.addEventListener("click", () => {
         //console.log("on");
         player.push(3);
         check();
-        one();
+        three();
         if (!win) {
             setTimeout(() => {
                 clearcolor();
@@ -230,7 +230,7 @@ bottomR.addEventListener("click", () => {
         //console.log("on");
         player.push(4);
         check();
-        one();
+        four();
         if (!win) {
             setTimeout(() => {
                 clearcolor();
