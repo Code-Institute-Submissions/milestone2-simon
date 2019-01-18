@@ -2,7 +2,7 @@
 
 ## - Simon Memory Game
 
-Play Here  Now - <a href="#">Simon Game</a>
+Play Here  Now - <a href="https://patrickoneill.github.io/milestone2-simon/">Simon Game</a>
 
 
 Code Institute Project to create a memory game using 
@@ -92,4 +92,6 @@ describe("Testing power", () => {
     });
 });
 ```
+
+
 
