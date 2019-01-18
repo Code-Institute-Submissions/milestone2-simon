@@ -266,8 +266,15 @@ function check() {
                 setInterval(flashTime, 800);
             }
         }, 800);
+        noise = false;
     }
-    noise = false;
+    if (turn == player.length && correct && !win) {
+        turn++;
+        player = [];
+        flash = 0;
+        counter.innerHTML = turn;
+        flashTime = setInterval(gamesTurn, 800);
+    }
 }
 
 function flashColor() {
