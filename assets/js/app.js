@@ -187,7 +187,7 @@ topL.addEventListener("click", () => {
     if (on) {
         //console.log("on");
         player.push(1);
-        //check();
+        check();
         one();
         if (!win) {
             setTimeout(() => {
@@ -201,7 +201,7 @@ topR.addEventListener("click", () => {
     if (on) {
         //console.log("on");
         player.push(2);
-        //check();
+        check();
         one();
         if (!win) {
             setTimeout(() => {
@@ -215,7 +215,7 @@ bottomL.addEventListener("click", () => {
     if (on) {
         //console.log("on");
         player.push(3);
-        //check();
+        check();
         one();
         if (!win) {
             setTimeout(() => {
@@ -229,7 +229,7 @@ bottomR.addEventListener("click", () => {
     if (on) {
         //console.log("on");
         player.push(4);
-        //check();
+        check();
         one();
         if (!win) {
             setTimeout(() => {
@@ -242,7 +242,32 @@ bottomR.addEventListener("click", () => {
 // next need to create a function to check the answers against the cpu
 
 function check() {
-    if(player[])
+    if (player.length == 20 && correct) {
+        //gameOver();
+    }
+    if (player[player.length] !== order[player.length]) {
+        correct = false;
+    }
+    if (correct == false) {
+        flashColor();
+        turn.innerHTML = "Not Me!";
+        setTimeout(() => {
+            turn.innerHTML = turn;
+            clearcolor();
+
+            if (diff) {
+                playGame();
+            }
+            else {
+                cpu = true;
+                flash = 0;
+                player = [];
+                correct = true;
+                setInterval(flashTime, 800);
+            }
+        }, 800);
+    }
+    noise = false;
 }
 
 function flashColor() {
