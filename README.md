@@ -61,11 +61,35 @@ I had forgotten a few call to function that I need to keep the game loop going t
 ##### Other source materials that I used in the creation of this was:
 - HTML & CSS by Jon Duckett
 - JavaScript & JQuery by Jon Duckett
+- w3schools.com
+- SoloLearn
 
 ### Bootstrap 3
 
 I used bootstrap for the basic layout and and buttons inside the game.
+The use of the bootstrap grid system col-md-*
 
 ### Jasmine 
 
-Using jasmine to test the elements of the game
+Using jasmine to test the elements of the game.
+
+As with the ES6 above the testing is done in the same format:
+
+```javascript
+describe("Testing power", function() {
+    describe("Power Button", function() {
+        it("should return true", function() {
+            expect(power.checked).toBe(false);
+        });
+    });
+});
+
+describe("Testing power", () => {
+    describe("Power Button", () => {
+        it("should return true", () => {
+            expect(power.checked).toBe(false);
+        });
+    });
+});
+```
+
