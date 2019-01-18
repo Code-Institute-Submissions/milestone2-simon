@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/boot.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
-
     <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
-
     <audio id="audio1" src="assets/audio/simonSound1.mp3"></audio>
     <audio id="audio2" src="assets/audio/simonSound2.mp3"></audio>
     <audio id="audio3" src="assets/audio/simonSound3.mp3"></audio>
@@ -21,9 +23,24 @@
     <div class="container">
         <div class="container bg-header col-md-12 header">
             <div class="row">
-                <h1 class="heading">Welcone To Simon</h1>
-                <h5 class="description">Hello, I'm Simon. I am a memory game from the 1970's that plays a sequence of lights that you have to follow the order to win the game. As the levels go up the tricker i get SO PAY ATTENTION.
-                </h5>
+                <h1 class="heading col-md-6">Welcone To Simon</h1>
+                <div class="row col-md-12 simon">
+                    <div class="row">
+                        <h5 class="description">Hello, I'm Simon. I am a memory game from the 1970's that plays a sequence of lights that you have to follow the order to win the game. As the levels go up the tricker i get SO PAY ATTENTION.
+                        </h5>
+                    </div>
+                    <div class="row">
+                        <h5 class="game-rules col-md-6">
+                            <ul>
+                                <li>Starting the Game: Tick the box to power on the game.</li>
+                                <li> Then click on the start button and begin playing.</li>
+                                <li> Normal Mode: If you make a mistake the game will replay the last sequence</li>
+                                <li>Hard Mode: If you make a mistake the game will reset to the begining</li>
+
+                            </ul>
+                        </h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -35,13 +52,14 @@
             <div id="game" class="container-fluid bg-section col-md-12">
 
             </div>
-            <div class="row col-md-12" id="screen"></div>
+            <div class="row col-md-12 col-sm-12" id="screen"></div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Load JS file -->
     <script type="text/javascript" src="assets/js/app.js"></script>
-
+    <!-- Load JS test file -->
+    <script type="text/javascript" src="assets/spec/appSpec.js"></script>
 </body>
 
 </html>
