@@ -243,7 +243,7 @@ bottomR.addEventListener("click", () => {
 
 function check() {
     if (player.length == 20 && correct) {
-        //gameOver();
+        gameOver();
     }
     if (player[player.length] !== order[player.length]) {
         correct = false;
@@ -278,15 +278,23 @@ function check() {
 }
 
 function flashColor() {
-    topL.style.backgroundColor = "darkgreen"
+    topL.style.backgroundColor = "darkgreen";
     topR.style.backgroundColor = "darkred";
     bottomR.style.backgroundColor = "darkblue";
     bottomL.style.backgroundColor = "goldenrod";
 }
 
 function clearcolor() {
-    topL.style.backgroundColor = "green"
+    topL.style.backgroundColor = "green";
     topR.style.backgroundColor = "red";
     bottomR.style.backgroundColor = "blue";
-    bottomL.style.backgroundColor = "yellow";;
+    bottomL.style.backgroundColor = "yellow";
+}
+// need to create a gameOver()
+
+function gameOver() {
+    flashColor();
+    counter.innerHTML = "Winner Winner";
+    on = false;
+    win = true;
 }
