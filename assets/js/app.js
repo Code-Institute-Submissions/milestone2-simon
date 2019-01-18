@@ -1,12 +1,16 @@
-const simon = document.getElementById("game");
-const button = document.getElementById("switch");
-const screen = document.getElementById("screen")
-console.log(simon);
-console.log(button);
+/*In the making of this game i have decided to let Java do most of the work for the HTML side just as a challenge for myself to show its power. I'm using the ECMCScript 6 format for most of it.
+*/
+const simon = document.getElementById("game");      //target id on the HTML page
+const button = document.getElementById("switch");   //as const because they
+const screen = document.getElementById("screen");   //won't be changed.
+console.log(simon);     //seeing it come to life in the console (game area)
+console.log(button);    //for the creation of the buttons.
 
-var label = document.createElement("label");
-var label2 = document.createElement("label");
+const label = document.createElement("label");      //for the craetion of the
+const label2 = document.createElement("label");     //labels on the page.
 
+/* created the element button, set id and class and then gave them their attributes. Set the HTML needed and then appended them to the game in the order that is needed
+*/
 const startGame = document.createElement("button");
 startGame.setAttribute("id", "start");
 startGame.setAttribute("class", "btn btn-success");
@@ -66,21 +70,22 @@ const accountName = document.createElement("div");
 accountName.setAttribute("class", "my-account align-right");
 accountName.innerHTML = "<a href='https://github.com/patrickoneill'>Patrick O'Neill @  GitHub</a>";
 screen.appendChild(accountName);
-
-let player = [];
-let order = [];
-let on = false;
-let diff = false;
-let win;
+/* created the variables as needed throughout the game using let instead of var indication that they a subject to change at block level */
+let player = [];    //store players turn
+let order = [];     //store the order that the game creates
+let on = false;     // bool value for the power
+let diff = false;   //bool value for the difficulty
+let win;            //created for block level values
 let flash;
 let flashTime;
-let noise = true;
+let noise = true;   ///bool value for the audio
 let turn;
 let correct;
 let cpu;
 
+/* Event listener for the power switch, checks if it's on or off and changes the innerHTML for the readout */
 power.addEventListener("click", (event) => {
-    //console.log("Checked");
+    console.log("Checked");
     if (power.checked == true) {
         on = true;
         counter.innerHTML = "READY";
@@ -94,9 +99,9 @@ power.addEventListener("click", (event) => {
     console.log(power.checked);
 
 });
-
+/* Event listener for the difficult mode */
 difficulty.addEventListener("click", (event) => {
-    //console.log("Checked");
+    console.log("Checked");
     if (difficulty.checked == true) {
         diff = true;
     }
@@ -105,14 +110,14 @@ difficulty.addEventListener("click", (event) => {
     }
     console.log(difficulty.checked);
 });
-
+/* Checks to see if the power button has been switched on or if the game has been won and will call the playGame() function to start */
 startGame.addEventListener("click", () => {
     if (on || win) {
         playGame();
     }
-    //console.log(startGame);
+    console.log(startGame);
 });
-
+/* Starts the game by setting win to false till the game ends, has the empty Array for the player and the order to be stored, set the variables for this block. Created a loop that will create a loop of 20 numbers from 1-4 sets the interval time for the flashes */
 function playGame() {
     win = false;
     order = [];
@@ -148,7 +153,7 @@ function gamesTurn() {
             if (order[flash] == 2) two();
             if (order[flash] == 3) three();
             if (order[flash] == 4) four();
-            //increase flash
+            
             flash++;
         }, 200)
     }
