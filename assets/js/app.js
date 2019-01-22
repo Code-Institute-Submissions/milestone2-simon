@@ -135,7 +135,7 @@ function playGame() {
     cpu = true;
     flashTime = setInterval(gamesTurn, 800);
 }
-
+// the function for the game turn, checks who is playing and continues
 function gamesTurn() {
     on = false;
 
@@ -158,9 +158,7 @@ function gamesTurn() {
         }, 200)
     }
 }
-// will need to create a change color function
-// create a function for each of the flashing elements
-// will need an event listner on the colors
+/* these are the function that will look after the sound in the game and are called in the gamesTurn(), one for each colour */
 function one() {
     if (noise) {
         let audio = document.getElementById("audio1");
@@ -196,6 +194,8 @@ function four() {
     noise = true;
     bottomR.style.backgroundColor = "darkblue";
 }
+
+/* click event for eah of the buttons whille the game is in play, one for each button */
 
 topL.addEventListener("click", (event) => {
     if (on) {
@@ -253,7 +253,7 @@ bottomR.addEventListener("click", (event) => {
     }
 });
 
-// next need to create a function to check the answers against the cpu
+/* this function checks the conditions of the game to see if the player has won yet of if it should conntinue */
 
 function check() {
     if (player[player.length-1] !== order[player.length-1]) {
@@ -292,20 +292,21 @@ function check() {
     }
 }
 
+/* function to flash the colour in the game*/
 function flashColor() {
     topL.style.backgroundColor = "darkgreen";
     topR.style.backgroundColor = "darkred";
     bottomR.style.backgroundColor = "darkblue";
-    bottomL.style.backgroundColor = "goldenrod";
+    bottomL.style.backgroundColor = "orange";
 }
-
+/* function to clear the colour in the game if the sequence is wrong or moving on*/
 function clearcolor() {
     topL.style.backgroundColor = "green";
     topR.style.backgroundColor = "red";
     bottomR.style.backgroundColor = "blue";
     bottomL.style.backgroundColor = "yellow";
 }
-// need to create a gameOver()
+/* the gameOver() throws up an alert to the screen to say game over and sets the values of the variables so that the game can play again*/
 
 function gameOver() {
     alert("Game Over")
