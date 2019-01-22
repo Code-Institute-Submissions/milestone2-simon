@@ -1,20 +1,20 @@
 /*In the making of this game i have decided to let Java do most of the work for the HTML side just as a challenge for myself to show its power. I'm using the ECMCScript 6 format for most of it.
-*/
-const simon = document.getElementById("game");      //target id on the HTML page
-const button = document.getElementById("switch");   //as const because they
-const screen = document.getElementById("screen");   //won't be changed.
-console.log(simon);     //seeing it come to life in the console (game area)
-console.log(button);    //for the creation of the buttons.
+ */
+const simon = document.getElementById("game"); //target id on the HTML page
+const button = document.getElementById("switch"); //as const because they
+const screen = document.getElementById("screen"); //won't be changed.
+console.log(simon); //seeing it come to life in the console (game area)
+console.log(button); //for the creation of the buttons.
 
-const label = document.createElement("label");      //for the craetion of the
-const label2 = document.createElement("label");     //labels on the page.
+const label = document.createElement("label"); //for the craetion of the
+const label2 = document.createElement("label"); //labels on the page.
 
 /* created the element button, set id and class and then gave them their attributes. Set the HTML needed and then appended them to the game in the order that is needed
-*/
+ */
 const startGame = document.createElement("button");
 startGame.setAttribute("id", "start");
 startGame.setAttribute("class", "btn btn-success");
-startGame.innerHTML = "<strong>Start Game</Strong>";
+startGame.innerHTML = "Start Game";
 button.appendChild(startGame);
 
 const power = document.createElement("input");
@@ -71,14 +71,14 @@ accountName.setAttribute("class", "my-account align-right");
 accountName.innerHTML = "<a href='https://github.com/patrickoneill'>Patrick O'Neill @  GitHub</a>";
 screen.appendChild(accountName);
 /* created the variables as needed throughout the game using let instead of var indication that they a subject to change at block level */
-let player = [];    //store players turn
-let order = [];     //store the order that the game creates
-let on = false;     // bool value for the power
-let diff = false;   //bool value for the difficulty
-let win;            //created for block level values
+let player = []; //store players turn
+let order = []; //store the order that the game creates
+let on = false; // bool value for the power
+let diff = false; //bool value for the difficulty
+let win; //created for block level values
 let flash;
 let flashTime;
-let noise = true;   ///bool value for the audio
+let noise = true; ///bool value for the audio
 let turn;
 let correct;
 let cpu;
@@ -125,7 +125,7 @@ function playGame() {
     flash = 0;
     flashTime = 0;
     turn = 1;
-    counter.innerHTML = "";
+    counter.innerHTML = "Here We Go";
     correct = true;
 
     for (let i = 0; i < 20; i++) {
@@ -153,7 +153,7 @@ function gamesTurn() {
             if (order[flash] == 2) two();
             if (order[flash] == 3) three();
             if (order[flash] == 4) four();
-            
+
             flash++;
         }, 200)
     }
@@ -183,7 +183,7 @@ function three() {
         audio.play();
     }
     noise = true;
-    bottomL.style.backgroundColor = "goldenrod";
+    bottomL.style.backgroundColor = "orange";
 }
 
 function four() {
@@ -256,7 +256,7 @@ bottomR.addEventListener("click", (event) => {
 /* this function checks the conditions of the game to see if the player has won yet of if it should conntinue */
 
 function check() {
-    if (player[player.length-1] !== order[player.length-1]) {
+    if (player[player.length - 1] !== order[player.length - 1]) {
         correct = false;
     }
     if (player.length == 20 && correct) {
