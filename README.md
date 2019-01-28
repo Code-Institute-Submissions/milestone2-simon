@@ -99,5 +99,10 @@ As with the testing in jasmine, I used friends and family to see how they got on
 
 For deployment I have used github pages.
 
+#### Wireframes and work
+
+![dsc_0323](https://user-images.githubusercontent.com/33999607/51835714-394a9880-22f6-11e9-8ed5-d52cf3f880a8.JPG)
+
+![dsc_0324](https://user-images.githubusercontent.com/33999607/51835722-3cde1f80-22f6-11e9-8555-a419e6a4e682.JPG)
 
 
