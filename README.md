@@ -5,7 +5,7 @@
 Play Here  Now - <a href="https://patrickoneill.github.io/milestone2-simon/">Simon Game</a>
 
 
-Code Institute Project to create a memory game using 
+#### Code Institute Project to create a memory game using 
 
 - HTML5
 - CSS
@@ -27,7 +27,7 @@ and ES6 in the creation of the game.
 
 The game components have been created by the CSS file. Using the # selector 
 for easy styling. Using border-radius , sizing and margin to place to pieces 
-together 
+together. Background image was sourced from www.pexel.com
 
 ### JavaScript & ECMAScript 6
 
@@ -92,6 +92,12 @@ describe("Testing power", () => {
     });
 });
 ```
+
+As with the testing in jasmine, I used friends and family to see how they got on with it. How it felt and played. A few thought it worked fine and found themselves getting faster with the game, others found it good but need minor things changed likes of readout from the game.
+
+#### Deployment
+
+For deployment I have used github pages.
 
 
 
